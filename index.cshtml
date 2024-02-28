@@ -1,0 +1,19 @@
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<h1>Welcome</h1>
+
+<input type="checkbox" id="myCheckbox" onchange="delayUncheck()">
+
+@section Scripts {
+    <script>
+        function delayUncheck() {
+            setTimeout(function () {
+                document.getElementById("myCheckbox").checked = false;
+            }, 2000);
+        }
+    </script>
+}
